@@ -16,24 +16,26 @@
 .add-form{
   margin: 2em 0.5em 0 0.5em;
   max-width: 80%;
-
 }
 
 /*Search Box*/
 .search-box{
-  margin: 4em 0.5em 0 0.5em;
+  margin: 4em 0em 0 0em;
 }
 .contact-list{
 align-items: center;
 justify-content: center;
- max-width: 80%;
+ max-width: 90%;
+  margin: 0 !important;
+  padding: 20px 0 0 0 !important;
 }
 
 /* Each Contact Items */
 .each-contact-box {
   padding: 0.5em;
-  background-color: rgba(250, 235, 215, 0.636);
-  border: 1px solid #ccc;
+  background-color: rgba(69, 83, 99, 0.636);
+  background-image: linear-gradient(90deg, #1e3c72 0%, #000000 100%);
+  /* border: 1px solid #ccc; */
   border-radius: 20px;
   margin: 0.5em;
 }
@@ -43,8 +45,21 @@ justify-content: center;
     justify-content: center;
     align-items: center;
   }
-  .avatar {
+
+  .fa-person {
+
     margin: 0.3em auto;
+    color: rgba(255, 255, 255, 0.795);
+  }
+  .rm-profile{
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rm-profile:hover {
+    color: red;
+    cursor: pointer;
   }
   .each-contact {
     display: flex;

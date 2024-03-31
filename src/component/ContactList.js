@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchBox from './SearchBox';
 import ContactItem from './ContactItem';
-import { Button } from 'react-bootstrap';
+import { Button, Row, Col, Container } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 
 const ContactList = () => {
@@ -23,25 +23,35 @@ const ContactList = () => {
 	console.log('Filtered List:', filteredList, 'from Contact List');
 
 	return (
-		<div>
+		<Container>
 			<SearchBox />
-			<div className='contact-list'>
+			<Row className='contact-list'>
 				{searchKeyword.length > 0
 					? filteredList.map((item) => (
 							<>
 								<div className='d-grid gap-5 '>
 									<ContactItem key={item.name} item={item} />
-									<Button variant='danger' size='lg' onClick={showAll}>
-										Show All
-									</Button>
 								</div>
 							</>
 					  ))
 					: contactList.map((item) => (
 							<ContactItem key={item.name} item={item} />
 					  ))}
-			</div>
-		</div>
+			</Row>
+			<Row>
+				{searchKeyword.length > 0 ? (
+					<Button
+						variant='danger'
+						mb={3}
+						style={{ margin: '10px', width: '100px' }}
+						onClick={showAll}>
+						Show All
+					</Button>
+				) : (
+					''
+				)}
+			</Row>
+		</Container>
 	);
 };
 

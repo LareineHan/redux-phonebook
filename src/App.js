@@ -1,8 +1,10 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import ContactForm from './component/ContactForm';
 import ContactList from './component/ContactList';
+
 // 1. 왼쪽: 연락처 등록하는 폼 / 오른쪽: 연락처 리스트와 검색창
 // 2. 리스트에는 유저 이름과 전화번호를 추가할 수 있어야 함
 // 3. 리스트에 아이템이 몇개 있는지 보여준다.

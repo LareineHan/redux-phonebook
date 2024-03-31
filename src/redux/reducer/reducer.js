@@ -15,6 +15,16 @@ function reducer(state = initialState, action) {
 					},
 				],
 			};
+		case 'REMOVE_CONTACT':
+			return {
+				...state,
+				contactList: state.contactList.filter(
+					(item) =>
+						item.name !== payload.name ||
+						item.phoneNumber !== payload.phoneNumber
+				),
+			};
+
 		case 'SEARCH':
 			console.log('SEARCH payload', payload);
 			console.log('New Search Keyword:', payload.searchKeyword);
